@@ -12,7 +12,7 @@ function Translator() {
   this.translate = function (reqObj) {
     const { text, locale } = reqObj;
 
-    if (!text || !locale) {
+    if (text === null || !locale) {
       return { error: "Required field(s) missing" };
     }
 
