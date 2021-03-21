@@ -12,6 +12,10 @@ function Translator() {
   this.translate = function (reqObj) {
     const { text, locale } = reqObj;
 
+    if (!text || !locale) {
+      return { error: "Required field(s) missing" };
+    }
+
     if (text === "") {
       return { error: "No text to translate" };
     }
