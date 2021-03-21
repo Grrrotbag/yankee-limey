@@ -89,8 +89,8 @@ function Translator() {
         }
       });
     }
-    if(JSON.stringify(originalArr)==JSON.stringify(workingArr)) {
-      return { text: text, translation: "Everything looks good to me!"}
+    if (JSON.stringify(originalArr) == JSON.stringify(workingArr)) {
+      return { text: text, translation: "Everything looks good to me!" };
     }
     return { text: text, translation: workingArr.join(" ") };
   };
