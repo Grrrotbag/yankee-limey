@@ -12,7 +12,7 @@ function Translator() {
   this.translate = function (reqObj) {
     const { text, locale } = reqObj;
 
-    if (text === null || !locale) {
+    if (text === undefined || locale === undefined) {
       return { error: "Required field(s) missing" };
     }
 
@@ -88,6 +88,9 @@ function Translator() {
           workingArr[wordIdx] = replacementWord;
         }
       });
+    }
+    if(JSON.stringify(originalArr)==JSON.stringify(workingArr)) {
+      return { text: text, translation: "Everything looks good to me!"}
     }
     return { text: text, translation: workingArr.join(" ") };
   };
