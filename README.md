@@ -1,5 +1,7 @@
 # Yankee-Limey
 
+![preview image](preview.png)
+
 Yankee-Limey is a translation app to bring the Anglosphere together. Input either American or British style English language and ye shall receive the translation.
 
 Either test the API with the provided text box, or query the API directly with a `POST` request to `/api/translate`.
