@@ -1,3 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Ribeye+Marrow&family=Source+Serif+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+:root {
+  --vermilion: #c84630ff;
+  --pastel-pink: #d4a0a7ff;
+  --platinum: #e3e3e3ff;
+  --battleship-grey: #898989ff;
+  --forest-green-crayola: #5da271ff;
+  --display-font: "Ribeye Marrow", cursive;
+  --main-font: "Source Serif Pro", serif;
+}
+
+body {
+  font-family: var(--main-font);
+}
+
+header {
+  text-align: center;
+}
+
+header h1 {
+  font-family: var(--display-font);
+  color: var(--forest-green-crayola);
+}
+
+header h3 {
+  font-style: italic;
+}
+
 code {
   background: #d0d0d5;
 }
@@ -9,14 +37,12 @@ code {
 
 .form-container {
   max-width: 95%;
+  margin: auto;
 }
 
 textarea {
-  width: 100%;
-}
-
-#user-stories {
-  font-size: 1.2em;
+  margin: auto;
+  width: 95%;
 }
 
 #output-container,
@@ -34,11 +60,10 @@ input[type="button"] {
 }
 
 #solution-container {
+  width: 95%;
+  margin: auto;
+  margin-top: 2rem;
   font-weight: bold;
-}
-
-#solution-container {
-  margin-left: 20px;
 }
 
 #translated-sentence {
@@ -48,11 +73,11 @@ input[type="button"] {
 
 #error-msg {
   font-weight: normal;
-  color: red;
+  color: var(--vermilion);
 }
 
 .highlight {
-  color: green;
+  color: var(--forest-green-crayola);
 }
 
 #text-input {
@@ -66,6 +91,42 @@ input[type="button"] {
 
   .form-container {
     align-self: flex-end;
+    margin-left: 2rem;
+  }
+
+  #locale-select {
+    padding: 4px 32px;
+  }
+  #translate-btn {
+    background-color: var(--forest-green-crayola);
+    border: none;
+    color: white;
+    padding: 5px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+
+  #translate-btn:hover {
+    background-color: var(--vermilion);
+    color: white;
+  }
+
+  header {
+    text-align: center;
+  }
+
+  header h1 {
+    font-family: var(--display-font);
+    font-size: 5rem;
+    color: var(--forest-green-crayola);
+  }
+
+  header h3 {
+    font-size: 2rem;
+    font-style: normal;
   }
 
   #output-container {
@@ -77,5 +138,6 @@ input[type="button"] {
   #solution-container {
     width: 75%;
     margin-top: 0;
+    margin-left: 2rem;
   }
 }
