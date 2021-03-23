@@ -25,7 +25,7 @@ suite("Unit Tests", () => {
     };
     assert.deepEqual(translator.translate(input), {
       text: "I ate yogurt for breakfast.",
-      translation: 'I ate <span class="highlight">yoghurt</span> for breakfast.',
+      translation: 'I ate <span class="highlight">yoghurt</span> for <span class="highlight">brekkie</span>.',
     });
     done();
   });
@@ -37,7 +37,7 @@ suite("Unit Tests", () => {
     };
     assert.deepEqual(translator.translate(input), {
       text: "We had a party at my friend's condo.",
-      translation: "We had a party at my friend's flat.",
+      translation: `We had a party at my friend's <span class="highlight">flat</span>.`,
     });
     done();
   });
@@ -49,7 +49,7 @@ suite("Unit Tests", () => {
     };
     assert.deepEqual(translator.translate(input), {
       text: "Can you toss this in the trashcan for me?",
-      translation: 'Can you toss this in the <span class="highlight">bin</span> for me?',
+      translation: "Can you toss this in the <span class=\"highlight\">bin</span> for me?",
     });
     done();
   });
@@ -61,18 +61,18 @@ suite("Unit Tests", () => {
     };
     assert.deepEqual(translator.translate(input), {
       text: "The parking lot was full.",
-      translation: `The <span class="highlight">car park</span> was full`,
+      translation: `The <span class="highlight">car park</span> was full.`,
     });
     done();
   });
 
-  test("Like a high tech Rube Goldberg machine. to British English", (done) => {
+  test("Like a high tech rube goldberg machine. to British English", (done) => {
     let input = {
-      text: "Like a high tech Rube Goldberg machine.",
+      text: "Like a high tech rube goldberg machine.",
       locale: "american-to-british",
     };
     assert.deepEqual(translator.translate(input), {
-      text: "Like a high tech Rube Goldberg machine.",
+      text: "Like a high tech rube goldberg machine.",
       translation: `Like a high tech <span class="highlight">Heath Robinson device</span>.`,
     });
     done();
@@ -145,7 +145,7 @@ suite("Unit Tests", () => {
     };
     assert.deepEqual(translator.translate(input), {
       text: "Paracetamol takes up to an hour to work.",
-      translation: '<span class="highlight">Tylenol</span> takes up to an hour to work.',
+      translation: "<span class=\"highlight\">tylenol</span> takes up to an hour to work.",
     });
     done();
   });
@@ -169,7 +169,7 @@ suite("Unit Tests", () => {
     };
     assert.deepEqual(translator.translate(input), {
       text: "I spent the bank holiday at the funfair.",
-      translation: "Everything looks good to me!",
+      translation: "I spent the <span class=\"highlight\">public holiday</span> at the <span class=\"highlight\">carnival</span>.",
     });
     done();
   });
@@ -181,7 +181,7 @@ suite("Unit Tests", () => {
     };
     assert.deepEqual(translator.translate(input), {
       text: "I had a bicky then went to the chippy.",
-      translation: 'I had a <span class="highlight">cookie</span> then went to the chippy.',
+      translation: "I had a <span class=\"highlight\">cookie</span> then went to the <span class=\"highlight\">fish-and-<span class=\"highlight\">fish-and-chip shop</span></span>.",
     });
     done();
   });
@@ -193,7 +193,7 @@ suite("Unit Tests", () => {
     };
     assert.deepEqual(translator.translate(input), {
       text: "I've just got bits and bobs in my bum bag.",
-      translation: "Everything looks good to me!",
+      translation: "I've just got <span class=\"highlight\">odds and ends</span> in my <span class=\"highlight\">fanny pack</span>.",
     });
     done();
   });
@@ -205,7 +205,7 @@ suite("Unit Tests", () => {
     };
     assert.deepEqual(translator.translate(input), {
       text: "The car boot sale at Boxted Airfield was called off.",
-      translation: "Everything looks good to me!",
+      translation: `The <span class="highlight">swap meet</span> at Boxted Airfield was called off.`,
     });
     done();
   });
@@ -265,7 +265,7 @@ suite("Unit Tests", () => {
     };
     assert.deepEqual(translator.translate(input), {
       text: "I ate yogurt for breakfast.",
-      translation: `I ate <span class="highlight">yoghurt</span> for breakfast.`,
+      translation: `I ate <span class="highlight">yoghurt</span> for <span class="highlight">brekkie</span>.`,
     });
     done();
   });
@@ -289,7 +289,7 @@ suite("Unit Tests", () => {
     };
     assert.deepEqual(translator.translate(input), {
       text: "Paracetamol takes up to an hour to work.",
-      translation: `<span class="highlight">Tylenol</span> takes up to an hour to work.`,
+      translation: `<span class="highlight">tylenol</span> takes up to an hour to work.`,
     });
     done();
   });

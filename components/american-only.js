@@ -1,6 +1,6 @@
 module.exports = {
   "acclimate": "acclimatise",
-  "acetaminophen": "paracetamol",
+  // "acetaminophen": "paracetamol",
   "baby carriage": "pram",
   "backhoe": "digger",
   "band-aid": "Elastoplast",

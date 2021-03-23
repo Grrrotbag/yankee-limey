@@ -10,8 +10,5 @@ module.exports = function (app) {
     console.log(translator.translate(req.body));
 
     return res.json(translator.translate(req.body));
-
-    // let responseObj = translator.translate(req.body);
-    // return res.json({ text: responseObj.text, translation: responseObj.translation });
   });
 };
